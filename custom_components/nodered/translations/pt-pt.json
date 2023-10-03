@@ -1,12 +1,28 @@
 {
   "config": {
+    "abort": {
+      "single_instance_allowed": "Só  é permitida uma instância."
+    },
     "step": {
       "user": {
-        "description": "Quer configurar o Node-RED Companion?"
+        "description": "Deseja adicionar o  Node-RED Companion ao Home Assistant?"
       }
-    },
-    "abort": {
-      "single_instance_allowed": "Só é permitida uma configuração do Node-RED Companion."
+    }
+  },
+  "services": {
+    "trigger": {
+      "description": "Enviar uma mensagem para o fluxo do Node-RED flow que irá ser exporto no Home Assistant.",
+      "fields": {
+        "message": {
+          "description": "Este objecto de mensagem irá ser enviado no proximo nó.",
+          "name": "Mensagem"
+        },
+        "output_path": {
+          "description": "Virgulas separam os caminho para enviar mensagens. Zero é usado para envio para todos os caminhos.",
+          "name": "Caminho de saída"
+        }
+      },
+      "name": "Gatilho de fluxo do Node-RED "
     }
   }
 }
