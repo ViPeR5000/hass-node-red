@@ -3,3 +3,4 @@ homeassistant
 pip>=21.0,<24.1
 pre-commit
 hassil
+cryptography>=42.0.8 # not directly required, pinned by Snyk to avoid a vulnerability
